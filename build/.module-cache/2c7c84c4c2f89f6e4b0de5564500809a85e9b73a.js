@@ -24,10 +24,27 @@ var TodoList = React.createClass({displayName: "TodoList",
     return (
       React.createElement("div", null, 
         React.createElement("button", {onClick: this.handleAdd}, "Add Item"), 
-        React.createElement(ReactCSSTransitionGroup, {transitionName: "example", transitionEnterTimeout: 500, transitionLeaveTimeout: 300}, 
-          items
-        )
-      )
-    );
+        React.createElement(ReactCSSTransitionGroup, {
+            transitionName:   { 
+                enter :  'enter' , 
+                enterActive :  'enterActive' , 
+                leave :  'leave' , 
+                leaveActive :  'leaveActive' , 
+                appear :  'appear' , 
+                appearActive :  'appearActive'
+            }  }, 
+             item 
+          ), 
+
+          React.createElement(ReactCSSTransitionGroup, {
+            transitionName:   { 
+              enter :  'enter' , 
+              leave :  'leave' , 
+              appear :  'appear'
+            }  }, 
+             item2 
+          )
+              )
+            );
   }
 });

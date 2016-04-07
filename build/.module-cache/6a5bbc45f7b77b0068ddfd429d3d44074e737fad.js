@@ -1,4 +1,5 @@
-var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+
 var TodoList = React.createClass({displayName: "TodoList",
   getInitialState: function() {
     return {items: ['hello', 'world', 'click', 'me']};
